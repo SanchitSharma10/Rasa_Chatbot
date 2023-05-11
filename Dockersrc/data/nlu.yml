@@ -1,0 +1,291 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: faq/deploy_ap
+  examples: |
+    - Hi, how can I [deploy an actionpack](lp_deploy) or training material?
+    - Hi, how can I [deploy resources](lp_deploy) to users or team members?
+    - how can I [upload](lp_deploy) learning material for others?
+    - how do I [send](lp_deploy) training material to users?
+    - no I want to [deploy](lp_deploy) the learning module
+    - I want to deploy an actionpack to users
+
+- intent: faq/inform_user
+  examples: |
+    - I am a [user]{"entity": "UserRole", "value": "user"} on the domain
+    - user
+    - I am a user
+    - My role is not admin
+- intent: faq/inform_admin
+  examples: |
+    - I am an admin on the domain.
+    - admin
+    - admin account
+- intent: faq/q_ap
+  examples: |
+    - How can I [create an Action Pack](createAP)?
+    - I need to [create a training module](createAP)
+    - How [can I make a training set](createAP)?
+- intent: faq/q_ap_copy
+  examples: |
+    - How can I copy an actionpack?
+- intent: faq/q_ap_lesson
+  examples: |
+    - How can I add content to a specific Lesson?
+    - How can I add content to a specific lesson?
+    - how can i add items to my module?
+- intent: faq/q_ap_lt_delete
+  examples: |
+    - How do I delete a Topic or Lesson in an ActionPack?
+- intent: faq/q_ap_quizadd
+  examples: |
+    - How do I add a Digital Signature to an ActionPack?
+    - How do I add a Poll to an ActionPack?
+    - How do I add a Quiz to an ActionPack?
+    - How do I add a Survey to an ActionPack?
+- intent: faq/q_ap_rearrange
+  examples: >
+    - How can I rearrange the Topics or Lessons in my ActionPack within my learning module?
+- intent: faq/q_ap_rename
+  examples: |
+    - How can I rename Topic or Lesson?
+- intent: faq/q_ap_share
+  examples: |
+    - How do I share my Learning Set with others?
+    - I want to share my actionpack with the team
+- intent: faq/q_ap_shareable
+  examples: |
+    - What can be shared in a Learning Module?
+- intent: faq/q_ap_topic
+  examples: |
+    - How can I add a topic to my Action Pack?
+- intent: faq/q_category
+  examples: |
+    - What is a Category?
+- intent: faq/q_forms
+  examples: |
+    - What are Forms?
+- intent: faq/q_ls
+  examples: |
+    - How can I create a Learning Set?
+    - Can you show me how to make a Learning pack?
+    - How can I create Learning material?
+- intent: faq/q_ls_access
+  examples: |
+    - How do I get into my training material?
+    - Where can I find my Learning module?
+- intent: faq/q_ls_more
+  examples: |
+    - How do I add more lessons to my action pack or module?
+- intent: faq/q_resource_type
+  examples: |
+    - What types of Resources exist?
+- intent: faq/q_resource_learn_add
+  examples: |
+    - What types of Resources can I add to my Action Pack?
+- intent: faq/q_template_ap
+  examples: |
+    - how can I make a template of my actionpack?
+    - I need to make a template of my actionpack or learning module, how do I do it?
+- intent: faq/satisfied
+  examples: |
+    - Doing alright
+    - I am feeling pretty good
+    - I feel fine
+    - I feel great
+    - I"m ok
+- intent: faq/unsatisfied
+  examples: |
+    - I am annoyed
+    - I am frustrated
+    - I am in a hurry
+    - I am not happy
+    - [I am stressed]{"entity": "emotion", "value": "I am stressed"}
+    - I feel bad
+
+- intent: faq/failed_ap
+  examples: |
+    - I have [completed the sign and read and its not registering](apfail) that ive completed the lesson
+    - I have completed 2 items that say [they are not completed](apfail).
+    - on labtop [i keep hitting complete lesson and it wont save](apfail) i get a green notification on top of the screen saying lession completed no read checkmark
+    - i have already done that, i signed and hit submit. it still shows [only 75% completed](apfail).
+
+- intent: faq/prompt_cs
+  examples: |
+    - I would like to speak to a [customer support specialist](callCS)
+- intent: faq/fallback
+  examples: |
+    - I don't understand
+    - I'm sorry I don't get it
+    - Could you rephrase the question?
+    - I'm not sure what you're asking
+    - Can you please clarify your question?
+    - That's not what I asked
+- intent: ask_follow_up
+  examples: |
+    - Okay thanks I understand now
+    - I'm still lost
+    - I don't get it
+    - That makes sense
+    - Thank you that works
+    - That did the trick
+    - okay
+    - alright
+- intent: faq/redirection
+  examples: |
+    - I need to speak with a customer support representative
+    - Can I talk to a real person?
+    - I would like to speak with a representative
+- intent: faq/misunderstood
+  examples: |
+    - I don't understand what you're asking
+    - Can you repeat the question?
+    - Can you rephrase the question?
+- intent: faq/follow_up_after_answer
+  examples: |
+    - Yes, I have more questions
+    - Can you tell me more?
+    - I would like to know more
+    - Help me
+    - Can you help me?
+    - Please help me
+- intent: faq/negative_follow_up
+  examples: |
+    - No, that's all I needed
+    - I'm good, thank you
+    - That's all I wanted to know
+    - That makes sense
+
+- intent: faq/explain_FCR
+  examples: |
+    - Can you explain more about FCR?
+    - What is FCR?
+
+- intent: faq/explain_Action_Pack
+  examples: |
+    - Can you give me more information about Action Pack?
+    - What is Action Pack?
+
+- intent: faq/explain_Learning_Set
+  examples: |
+    - Can you tell me more about Learning Set?
+    - What is Learning Set?
+
+- intent: faq/explain_Resources
+  examples: |
+    - Can you explain more about Resources?
+    - What are Resources?
+
+- intent: faq/explain_Forms
+  examples: |
+    - Can you give me more information about Forms?
+    - What are Forms?
+
+- intent: faq/explain_Coach
+  examples: |
+    - Can you tell me more about Coach?
+    - I need to find out information about the Coach module
+    - I want to learn more about Coach
+    - What is Coach?
+
+- intent: faq/form_exit_loop
+  examples: |
+    - "Take me to general chat"
+    - Take me to general chat
+
+
+
+entities:
+- apfail
+- lp_deploy
+- createAP
+- callCS

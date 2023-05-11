@@ -1,0 +1,20 @@
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: LanguageModelFeaturizer
+    model_name: "distilbert"
+    model_weights: "distilbert-base-uncased"
+  - name: "DIETClassifier"
+    epochs: 100
+    learning_rate: 0.01
+  - name: ResponseSelector
+
+
+policies:
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+  - name: RulePolicy
+
+action_endpoint:
+  url: "http://localhost:5055/webhook"

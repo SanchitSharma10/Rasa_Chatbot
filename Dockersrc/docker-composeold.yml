@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  rasa:
+    image: acto_rasa_support
+    ports:
+      - "5002:5002"
+    command: ["run", "--port", "5002", "--connector", "slack", "--credentials", "credentials.yml", "--endpoints", "endpoints.yml", "--cors", "*", "--enable-api", "--debug"]
+    volumes:
+      - ./:/app
+
+  action_server:
+    image: acto_rasa_action_server
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./actions:/app/actions

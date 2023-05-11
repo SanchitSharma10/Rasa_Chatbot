@@ -1,0 +1,288 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - faq
+  - ask_follow_up
+  
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_default:
+  - text: I am sorry I am having difficulties in understanding your query. If you require additional support please type "I need to speak with a customer support representative".
+
+  utter_faq/satisfied:
+  - text: Good to hear! Please let us know how we can help.
+  utter_faq/deploy_ap:
+  - text: Are you a user or an admin on the domain? Please note, any role that is not admin is considered a user in this context.
+  utter_faq/q_ap_shareable:
+  - text: In the Learn tool, shareable links (if this feature is enabled for you) may be generated for Learning Sets and ActionPacks.
+  utter_faq/q_ap_rename:
+  - text: To edit the name of a Topic or Lesson click the Pencil icon.
+  utter_faq/q_ap_quizadd:
+  - text: |
+          - First you have to make a Form, or have a Pre-exisiting one in the Content Management System (CMS). Go to the second part if you have a pre-existing Form:
+          Click Add and select the type of form. This pulls up forms that were
+          previously created in Content Management. Forms are interactive
+          resources like Quizzes, Polls, Surveys, and Digital Signatures for Action Packs.
+          * For Action Packs*
+          - Once you have made the form, or know of one that exist, edit the action pack, and click on Add lesson on the left navigation panel.
+          Choose Form from the list of things you can add to the Lesson. From there you can pick the appropriate Form required for your learning module.
+          * For Certification *
+          - Go to the Coach panel located on the left panel of the Home screen of the ACTO Domain page (below Learn)
+          Click on the Create icon, and create a Certification. In the following wizard it will ask you to upload an Assessment.
+          It will load a document navigator that you can find and loacte the Assessment located in the CMS (Content Management System)
+          * For Scenario *
+          - Go to the Coach panel located on the left panel of the Home screen of the ACTO Domain page (below Learn)
+          Click on the Create icon, and create a Scenario. In the following wizard it will ask you to upload an Evaluation.
+          It will load a document navigator that you can find and loacte the Assessment located in the CMS (Content Management System)
+          * For FCR *
+          - Go to the Coach panel located on the left panel of the Home screen of the ACTO Domain page (below Learn)
+          Click on the Create icon, and create a FCR. In the following wizard it will ask you to upload an Field Coaching Report.
+          It will load a document navigator that you can find and loacte the Field Coaching Report located in the CMS (Content Management System)
+          * For Events *
+          - Go to the Events panel located on the left panel of the Home screen of the ACTO Domain page (below Coach)
+          Click on the Create icon, and create a Registiration Form. In the following wizard it will ask you to upload an Registiration Form.
+          It will load a document navigator that you can find and loacte the Registiration Form located in the CMS (Content Management System)
+  utter_faq/q_ap:
+  - text: |
+          1. Click Content Authoring from the Navigation menu. Select Learn.
+          2. Click into a Learning Set and Click Add New ActionPack on the top of
+          the menu OR click Create on the top-right of the Learn homepage and
+          select ActionPack.
+          3. Proceed through the wizard. Enter the information in the following
+          "fields:" Essentials, Setup, Tagging, and Competencies.
+          4. Click Save or Update after each section. Click Next Step from the
+          wizard menu to move on.
+  utter_faq/q_forms:
+  - text: |
+          Forms are resources created within Content Management and may be re-used
+          across different ActionPacks.
+          They can be added to ActionPacks. Forms are added before or after a Lesson.
+  utter_faq/unsatisfied:
+  - text: Sorry for the inconvenience this has caused you. Please let us know how we can help.
+  utter_faq/q_ls:
+  - text: |
+          A Learning Set is a folder within a training Category that contains one or more training modules, ActionPacks.
+          1. Click Content Authoring from the Navigation menu. Select Learn.
+          2. Click Create on the top-right of the Learn homepage. Select Learning Set.
+          3. Proceed through the wizard. Enter the information in the following
+          'fields:' Essentials, Stakeholders, Competencies.
+          4. Click Save or Update after each section. Click next Step from the wizard menu to move forward.
+          5.When you have entered all the relevant information click Complete.
+  utter_faq/q_ap_rearrange:
+  - text: |
+          To reorder Topics or Lessons, hover and three vertical dots will show up.
+          Use them to drag and drop the Topic or Lesson to the desired location within the Table of Contents.
+  utter_faq/q_resource_learn_add:
+  - text: |
+          The following types of resources may be added into a Lesson when you
+          select the Add Content button.
+          Please note that only Actions, Protips, and Descriptions are created directly within a Lesson. Other resource types must be uploaded or created in the Content Management tool and then pulled into the ActionPack.
+  utter_faq/q_ap_lt_delete:
+  - text: To delete a Topic or a Lesson click the Trashcan icon. If you cannot find it, try hovering over the title or clicking the 3 horizontal dots.
+  utter_faq/q_ap_share:
+  - text: |
+          1. Click Content Authoring from the Navigation menu. Select Learn.
+          2. Navigate to the Learning Set or ActionPack you would like to copy.
+          3. Click the More icon and select Copy Link. Then click Copy.
+          You may then share this URL link. Please note, the link recipient(s) must already be deployed this content.
+  utter_faq/inform_user:
+  - text: |
+          Sorry, deploying is only for **admin** accounts
+          Users may only view and complete training,
+          resources, coaching, and other content that has been deployed to them by administrators.
+  utter_faq/q_category:
+  - text: |
+          A Category is a grouping of training content based on a classification,
+          for example therapeutic area, clinical, or sales training; onboarding and more. Categories contain Learning Sets.
+  utter_faq/q_ls_access:
+  - text: |
+          Log in to ACTO on your computer browser. Please Note to use Google Chrome or Mozilla Firefox.
+          Make sure you are in administrative mode. End-users cannot access admin functions.
+          Expand the Navigation menu on the left of your screen.
+          Click Content Authoring and then select Learn.
+  utter_faq/q_ls_more:
+  - text: |
+          1. Log in to ACTO on your computer browser to use Google Chrome or Mozilla Firefox.
+          2. Navigate to the Learn module on the right side. Click on the 3 horizontal dots on any action pack window and select "Edit"
+          3. On the left hand side, you will see a + icon that is within the branch window of the Action pack
+          4. Click this + icon to add Topic/Lessons.
+  utter_faq/q_template_ap:
+  - text: |
+          To make a new ActionPack into a template, click the Mark this as an ActionPack Template checkbox in the Setup section of the ActionPack wizard when you are creating the ActionPack.
+          You may then select this template whenever you create a new ActionPack. To make an existing ActionPack a template, click back into the ActionPack
+          wizard (by clicking Edit on the side menu of the ActionPack) and select
+          "Mark this as an ActionPack Template" in the Setup section.
+  utter_faq/q_resource_type:
+  - text: "Press the following buttons to find out more about each Resource:"
+    buttons:
+        - title: "Action"
+          payload: '/q_resource_type_Action'
+          type: postback
+        - title: "Protip"
+          payload: '/q_resource_type_Protip'
+          type: postback
+        - title: "Description"
+          payload: '/q_resource_type_Description{"":""}'
+          type: postback
+        - title: "Images"
+          payload: '/q_resource_type_Images{"":""}'
+          type: postback
+        - title: "Video"
+          payload: '/q_resource_type_Video'
+          type: postback
+        - title: "Recorded Video"
+          payload: '/q_resource_type_RecordedVideo'
+          type: postback
+        - title: "Screen Capture"
+          payload: '/q_resource_type_ScreenCapture'
+          type: postback
+        - title: "Embedded YouTube"
+          payload: '/q_resource_type_embeddedyoutube{"":""}'
+          type: postback
+        - title: "Checklist"
+          payload: '/q_resource_type_checklist'
+          type: postback
+        - title: "Document"
+          payload: '/q_resource_type_document'
+          type: postback
+        - title: "URL"
+          payload: '/q_resource_type_URL{"":""}'
+          type: postback
+        - title: "Audio"
+          payload: '/q_resource_type_audio'
+          type: postback
+        - title: "Clinical Paper"
+          payload: '/q_resource_type_clinicalpaper'
+          type: postback
+        - title: "SCORM"
+          payload: '/q_resource_type_scorm'
+          type: postback
+
+  utter_faq/q_ap_lesson:
+  - text: |
+          1. To add content into a specific Lesson, click into the Lesson.
+          2. Click Add and select the type of form. This pulls up forms that were previously created in Content Management.
+          3. Forms are interactive resources like Quizzes, Polls, Surveys, and Digital Signatures.
+          4. Please note, with a few exceptions, resources you add into a Lesson must already be in the Content Management system and accessible to you.
+          Once you have entered all the content in a Lesson please click Save and Complete.
+  utter_faq/q_ap_topic:
+  - text: |
+          1. Click into an ActionPack from within its Learning Set.
+          2. To add a Topic to the ActionPack click Add from the ActionPack menu
+          and select Topic. To add a Lesson to a Topic, click Add New Lesson
+          beneath the Topic. Enter the Topic or Lesson name and then press your
+          Enter key.
+  utter_faq/inform_admin:
+  - text: |
+          Here are the step-by-step instructions on how to deploy on the domain below
+          1. Select Launchpad from the Navigation menu.
+          Click Launch a New Strategy and select the type of strategy you would like
+          to launch.
+          2. Please proceed through the strategy wizard. Fill out each of the
+          sections listed on the right.
+          3. Review & Complete - Review all the information you have entered and
+          click Complete.
+          To get started, click into the strategy you would like to add a deployment
+          to and select Create Deployment or Deploy.
+          Select the tool(s) you would like to deploy resources from. You may select
+          both or either Learn or Resources.
+          As you go through the wizard, please make sure to click Save and Next Step
+          after each section you complete.
+
+  utter_faq/q_ap_copy:
+  - text: |
+          Templatizing an ActionPack allows you to reuse and customize the
+          structure, content, tagging, and competencies within an already existing
+          ActionPack without needing to recreate it from scratch.
+          To find out how to achieve this, just ask;
+          "how can I make a template of my actionpack?"
+  utter_faq/failed_ap:
+  - text: |
+          We apologize for the incovienence you are experiencing. First please ensure the following,
+          1. Your internet connection is stable
+          2. Logout and start Google Chrome web browser in incognito mode, or restart your application if on tablet.
+          3. Login again and try to re-access the module. If you are able to, go through the module until you have finished all tasks.
+          4. If you cannot access the module or if the issue is unresolved, please type "I would like to speak to a customer support specialist"
+  utter_faq/prompt_cs:
+  - text: Placeholder until I figure out the API for prompting customer support specialists on ZD
+  utter_faq/fallback:
+  - text: "Could you please try rephrasing the question so I can understand it"
+  utter_faq/redirection:
+  - text: "Okay I will prompt a customer specialist to further assist you. Please hold on."
+  utter_faq/misunderstood:
+  - text: "I apologize, I may have misunderstood the sentence"
+  utter_faq/follow_up_after_answer:
+  - text: "Did that answer your question well enough?"
+  utter_faq/negative_follow_up:
+  - text: "Sure, please feel free to ask any other questions"
+  utter_default_excluded:
+  - text: "Either you were too specific or that content does not exist in my database. You can try values such as FCR, Action Pack, Learning Set, Resources, Forms and Coach to name a few."
+
+  utter_faq/explain_FCR:
+  - text: "The FCR stands for Field Coaching Report used by Managers to assess end-users. It is found in the Coach Module."
+
+  utter_faq/explain_Action_Pack:
+  - text: "The Action Pack is the main course learning that is built within learning sets. It is where all the training materials are found."
+
+  utter_faq/explain_Learning_Set:
+  - text: "The Learning set is a group of action-packs packed in one module like a learning course, found in the learn module."
+
+  utter_faq/explain_Resources:
+  - text: "The Resources is a content hub of any file uploads that are available to you via deployment from the Launchpad. They also come as a collection which is a folder of Resources."
+
+  utter_faq/explain_Forms:
+  - text: "The Forms are the main sort of resource files for ACTO specific tasks. For example In Learn Module, Actionpacks can use Quiz, Surveys and Digital signature Forms. Then there are other assessment forms such as Assessment, Evaluation and FCR that are used within Coach tool Certification and Scenarios and FCR."
+
+  utter_faq/explain_Coach:
+  - text: "The Coach tool is located under Learn in the application, and has a person icon on it. It is where managers can certify users, assess them, create scenarios for them or field coaching reports, including video submissions."
+
+
+actions:
+  - utter_goodbye
+  - utter_greet
+  - utter_default
+  - utter_faq
+  - action_faq
+  - action_random_response
+  - action_ask_for_more_info
+  - action_entity_out_of_bounds
+  - action_deactivate_form
+
+
+templates:
+  utter_ask_for_more_info:
+  - text: "Sure, what would you like to know about {{ subject }}?"
+
+entities:
+- createAP
+- lp_deploy
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
