@@ -9,6 +9,20 @@ The bot was designed to handle the most frequent customer queries, thereby reduc
 
 The chatbot was subsequently dockerized for consistent deployment and hosted on the cloud platform Okteto, demonstrating its scalability and adaptability to different infrastructures.
 
+# Model Selection and Features
+
+This project leverages the [Rasa](https://rasa.com/) framework for its open-source nature, flexibility, and its comprehensive pipeline that includes the DietClassifier and DistilBert models for Natural Language Understanding (NLU). The choice of these models was based on their ability to provide high-quality performance with lower computational overhead. BERT is a state of the art model trained on a large corpus of data, constantly updated and designed for smaller nlp tasks with built-in metrics. 
+
+I chose Rasa as it offers the ability to easily switch out different components of its pipeline if necessary, which adds flexibility to the development process. A unique feature of Rasa is its action files which can be employed to handle specific conversational edge cases. Furthermore, Rasa's human-friendly intent and entity recognition facilitate easy debugging and continuous improvement of the chatbot.
+
+The DietClassifier, provided by Rasa, is a pre-trained model that saves significant time and computational resources compared to training a model from scratch. It is capable of intent classification and entity recognition simultaneously, which streamlines the process of understanding user inputs. Furthermore, DietClassifier uses a Transformer architecture that allows for better understanding of context in sentences and is less likely to be confused by similar phrases with different meanings. 
+
+DistilBert, a lighter and faster version of the BERT model, is incorporated due to its ability to provide comparable performance to its heavier counterpart, but with less resource consumption. DistilBERT is a distilled version of BERT that is 40% smaller, but retains 95% of BERT’s performance. The use of DistilBert makes the chatbot suitable for deployment on cloud services without heavy computational demands, ensuring that the chatbot remains responsive, accurate and cost-effective. The reduced size also means that it can scalable for handling a high volume of user queries simultaneously, which is a common requirement for chatbots.
+
+The choice of these models was a balance between achieving high performance, maintaining efficiency, and considering practical aspects related to the deployment and maintenance of a responsive and effective chatbot service.
+
+
+
 ## Rasa_Chatbot on Cloud
 End to end rasa chatbot that has been trained and deployed to the cloud.
 The endpoint is: https://dockersrc-sanchitsharma10.cloud.okteto.net/webhooks/rest/webhook you can use a application/service like Postman to post JSON requests to it such as:
