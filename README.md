@@ -34,6 +34,7 @@ Follow these steps to get the application running:
 ### Steps
 1. Navigate to the project directory.
 
+  ```bash  
   cd yourrepository
 
 
@@ -45,6 +46,7 @@ Follow these steps to get the application running:
    
 3. Build the Docker image. Replace image_name with the name you want to give to the Docker image.
 
+   ```bash
    docker build -t image_name .
 
    
@@ -67,7 +69,8 @@ This guide will help you set up and run the project manually on an M1 Mac. We'll
 
 1. Navigate to the project directory.
 
-  cd yourrepository
+    ```bash
+    cd yourrepository
 
 
 2. Clone this repository to your local machine.
@@ -77,29 +80,29 @@ This guide will help you set up and run the project manually on an M1 Mac. We'll
    
   
 3. Create a new Conda environment. Replace env_name with the name you want to give to your new environment.
+
     ```bash
     conda create --name env_name python=3.8
 
-
 4. Activate the newly created environment.
+
     ```bash
     conda activate env_name
-
 
 5. Install Rasa 3.0 or higher in the active Conda environment.
 
     ```bash
     pip install rasa
 
-
-6.Ensure the Rasa version is 3.0 or higher by running:
+6. Ensure the Rasa version is 3.0 or higher by running:
 
    ```bash
    rasa --version
    
    
 7. Install the project's dependencies. If you have a requirements.txt file in the project, you can use the following command:
-    ```bash
+
+   ```bash
     pip install -r requirements.txt
 
 
