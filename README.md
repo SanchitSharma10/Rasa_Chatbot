@@ -34,10 +34,13 @@ The endpoint is: https://dockersrc-sanchitsharma10.cloud.okteto.net/webhooks/res
 For Headers just add "Content-Type" and its Value is "application/json" 
 
 # Key Features
-Data Extraction and Analysis: Used Python scripts to extract customer lines from Zendesk transcripts. Analyzed the data using techniques like Topic Modeling and t-SNE clustering to uncover common issues and queries.
-Chatbot Development with Rasa: Built a Rasa chatbot capable of handling the most common customer queries. The bot was designed to provide quick, automated responses to customer queries.
-Dockerization: Containerized the chatbot application using Docker, facilitating easy deployment and scaling.
-Cloud Deployment: Deployed the dockerized chatbot on Okteto, demonstrating its adaptability and scalability in a cloud environment.
+Data Extraction and Analysis:
+- Used Python scripts to extract customer lines from Zendesk transcripts. Analyzed the data using techniques like Topic Modeling and t-SNE clustering to uncover common issues and queries.
+- Chatbot Development with Rasa: Built a Rasa chatbot capable of handling the most common customer queries. The bot was designed to provide quick, automated responses to customer queries.
+- Testing: Tested the bot's intents and entities to understand if it was accurately prediciting different types of intents and entitites using 80/20 split data with training and testing datasets have different stories and examples
+- Dockerization: Containerized the chatbot application using Docker, facilitating easy deployment and scaling.
+- Cloud Deployment: Deployed the dockerized chatbot on Okteto, demonstrating its adaptability and scalability in a cloud environment. Tested the end point via Postman.
+- Integration with Zendesk: was able to poll for messages from closed chats and extract their message and time stamps with the plan provided.
 
 # How to Run
 ## Docker Container
