@@ -120,7 +120,7 @@ You can now interact with the bot by navigating to http://localhost:5005 in your
 
 Please note, you may need to adjust these instructions based on the specifics of your project setup.
 
-*This guide assumes the user is somewhat familiar with command line interface. For users that aren't as comfortable, you might want to add a bit more detail to each of the steps.
+*This guide assumes the user is somewhat familiar with command line interface.
 
 
 ### Prerequisites
