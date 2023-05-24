@@ -36,7 +36,7 @@ Follow these steps to get the application running:
 
   ```bash  
   cd yourrepository
-
+  ```
 
 2. Clone this repository to your local machine.
 
